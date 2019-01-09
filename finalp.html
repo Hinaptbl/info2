@@ -38,19 +38,28 @@
      人間の身勝手な行動によって<br>
      奪われる大切な命の数が<br>
      「０」になる事を願っています。<br>
+     <br><br>
+   
+ <p class="wfont5"> 選択してください </p>
 
- <br><br>
-  <p class="wfont2"> ~ Map ~  </p><br>
-<img  src="map1.png" usemap="#Map" width="700" height=600"/><br><br>
+<form name="question">
+  <p><u>質問１</u>　動物が好きですか？
+<input type=radio name="a"> はい
+<input type=radio name="a"> いいえ
+ <span id="like_error" class="error_m"></span>
 
-<br><br><br><br><br>
-<img src="portfolio.png" width="300" height="300"/>
-<br>
+<p><u>質問２</u> 保護犬には興味ありますか？
+<input type=radio name="b">はい
+<input type=radio name="b">いいえ
+ <span id="interest_error" class="error_m"></span>
 
-<p class="wfont2"> ここに画像を入れてみてください！ </p>
-<p class="wfont4">　Please insert the image here
+<p><u>質問３</u> ペット（犬猫）は欲しいですか？
+<input type=radio name="c">はい
+<input type=radio name="c">いいえ
+ <span id="want_error" class="error_m"></span>
 <br><br>
-
+<input type="button" value="決定" onClick="inuneko()">
+<br><br><br><br><br><br>
 
 </center>
 </body>
