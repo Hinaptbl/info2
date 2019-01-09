@@ -1,0 +1,74 @@
+
+body {
+  background-image: url("dogp.png");
+  background-attachment: fixed;
+}
+
+.wfont1 {
+    font-size: 55px;
+    font-weight: 500;
+    font-family: 'Courier';
+}
+
+.wfont2 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Courier New';
+}
+
+.wfont3 {
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Courier';
+}
+
+.wfont4 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'YuGothic';
+}
+
+.wfont5 {
+    color: orange;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'YuGothic';
+}
+
+
+.follow-me {
+  list-style: none;
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+}
+.follow-me li {
+  float: left;
+  margin: 0 8px 8px 0;
+  padding: 0;
+}
+.follow-me li a::before {
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 42px;
+  line-height: 42px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 42px;
+}
+
+.follow-me li a[href*="facebook.com"]::before       { border-color: #3b5998; color: #3b5998; content: "\f09a"; }
+.follow-me li a[href*="instagram.com"]::before      { border-color: #cd201f; color: #cd201f; content: "\f16d"; }
+.follow-me li a[href*="twitter.com"]::before        { border-color: #55acee; color: #55acee; content: "\f099"; }
+
+.follow-me li a[href*="facebook.com"]:hover::before       { background-color: #3b5998; }
+.follow-me li a[href*="instagram.com"]:hover::before      { background-color: #cd201f; }
+.follow-me li a[href*="twitter.com"]:hover::before        { background-color: #55acee; }
