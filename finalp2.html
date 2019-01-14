@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.1/dist/tf.min.js"></script>
+    <script src='imagenet_class.js'></script>
+    <script src='final.js'></script>
+   <title>FINAL PROJECT</title>
+   　<link href="final.css" rel="stylesheet">
+ </head>
+
+ <body>
+   <center>
+       <img src="Title.png" width="500" height="80"/><br><br>
+       <img src="line.png" width="500" height="5"/>
+     <p class="wfont6"> 下の地図から地域を選択して、<br>
+       あなたが今住んでいる地域の保護されている犬猫を探してみましょう。</p>
+      <img src="line.png" width="500" height="5"/><br><br>
+     <p class="wfont2"> ~ Map ~  </p><br>
+<img  src="map1.png" usemap="#Map" width="700" height=600"/><br><br>
+<br><br>
+<img src="line.png" width="500" height="20"/><br>
+<p class="wfont5"> 犬猫の種類がわからない？ </p>
+
+<p><input type="file" id='input_file'></p>
+<p><button onclick='onFileSelected()'>Load</button></p>
+<p><canvas id="test_canvas" width="256" height="256"></canvas></p>
+<p><button onclick="predict();">Predict</button></p>
+<p id='result'>Result</p>
+
+<p class="wfont2"> ファイルを選択からここに画像を入れてみてください！ </p>
+<p class="wfont4">　Please insert the image here
+<br><br>
+
+     </center></body>
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <ul class="follow-me">
+       <li><a href="https://twitter.com/kiringirafa"></a></li>
+       <li><a href="https://www.facebook.com/profile.php?id=100004056615256"></a></li>
+       <li><a href="https://www.instagram.com/s.hinaaa"></a></li>
+     </ul>
+
+     </html>
