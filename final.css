@@ -1,11 +1,7 @@
 
-body {
-  background-image: url("dogp.png");
-  background-attachment: fixed;
-}
-
 .wfont1 {
-    font-size: 55px;
+    color: orange;
+    font-size: 30px;
     font-weight: 500;
     font-family: 'Courier';
 }
@@ -26,6 +22,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     font-family: 'YuGothic';
+    text-shadow: 1px 2px 3px #808080;
 }
 
 .wfont5 {
@@ -35,6 +32,17 @@ body {
     font-family: 'YuGothic';
 }
 
+.wfont6 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'YuGothic';
+}
+
+.wfont7 {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'YuGothic';
+}
 
 .follow-me {
   list-style: none;
