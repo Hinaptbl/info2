@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.1/dist/tf.min.js"></script>
     <script src='imagenet_class.js'></script>
-    <script src='final.js'></script>
+    <script src='final2.js'></script>
    <title>FINAL PROJECT</title>
    　<link href="final.css" rel="stylesheet">
  </head>
@@ -18,8 +18,19 @@
        あなたが今住んでいる地域の保護されている犬猫を探してみましょう。</p>
       <img src="line.png" width="500" height="5"/><br><br>
      <p class="wfont2"> ~ Map ~  </p><br>
-<img  src="map1.png" usemap="#Map" width="700" height=600"/><br><br>
-<br><br>
+<img src="map1.png" usemap="#Map" width="700" height=600"/><br><br><br><br>
+<map name="Map">
+<area shape="rect" coords="573,41,795,200" href="finalp.html">
+<area shape="rect" coords="573,266,696,479" href="tohoku.html">
+<area shape="rect" coords="582,494,684,585" href="kanto.html">
+<area shape="rect" coords="466,418,551,592" href="chubu.html">
+<area shape="rect" coords="116,12,177,135" href="kinki.html">
+<area shape="rect" coords="321,414,414,591" href="chugoku.html">
+<area shape="rect" coords="318,643,444,721" href="shikoku.html">
+<area shape="rect" coords="114,564,243,758" href="kyushu.html">
+<area shape="rect" coords="260,153,233,218" href="okinawa.html">
+</map>
+
 <img src="line.png" width="500" height="20"/><br>
 <p class="wfont5"> 犬猫の種類がわからない？ </p>
 
@@ -29,8 +40,11 @@
 <p><button onclick="predict();">Predict</button></p>
 <p id='result'>Result</p>
 
-<p class="wfont2"> ファイルを選択からここに画像を入れてみてください！ </p>
-<p class="wfont4">　Please insert the image here
+<p class="wfont1"> ファイルを選択からここに画像を入れてみてください！ </p>
+<p class="wfont6"> ① ファイルを選択後、Loadを押してください。<br>
+                   ② 写真がアップロードされたらPredictを押してください。<br>
+                   ③ 下に英語で結果が出されます。<br><br>
+
 <br><br>
 
      </center></body>
