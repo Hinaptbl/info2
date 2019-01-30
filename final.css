@@ -44,6 +44,44 @@
     font-family: 'YuGothic';
 }
 
+.square_btn{
+    display: inline-block;
+    position: relative;
+    padding: 0.35em 1em;
+    background: #FFCC00;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.square_btn:before{
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: -webkit-calc(100% - 16px);
+    width: calc(100% - 16px);
+    height: 0;
+    border: solid 8px transparent;
+    border-bottom-color: #FFCC66;/*ボタン色より明るめの色に*/
+}
+
+.square_btn:active{/*押したとき*/
+    padding: 0.32em 0.9em;
+    -ms-transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.square_btn:active:before{
+    width: -webkit-calc(100% - 12px);
+    width: calc(100% - 12px);
+}
+
+.square_btn:active:before{
+   top:-12px;
+   border-width: 6px;
+}
+
 .follow-me {
   list-style: none;
   margin: 0 0 -8px;
@@ -72,6 +110,60 @@
   text-align: center;
   width: 42px;
 }
+
+#viewer {
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+#viewer img {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#loopslider {
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+#loopslider ul {
+    height: 300px;
+    float: left;
+    display: inline;
+    overflow: hidden;
+}
+
+#loopslider ul li {
+    width: 500px;
+    height: 300px;
+    float: left;
+    display: inline;
+    overflow: hidden;
+}
+
+#loopslider ul:after {
+    content: ".";
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+
+#loopslider ul {
+    display: inline-block;
+    overflow: hidden;
+}
+
+
 
 .follow-me li a[href*="facebook.com"]::before       { border-color: #3b5998; color: #3b5998; content: "\f09a"; }
 .follow-me li a[href*="instagram.com"]::before      { border-color: #cd201f; color: #cd201f; content: "\f16d"; }

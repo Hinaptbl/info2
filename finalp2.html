@@ -6,6 +6,45 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.1/dist/tf.min.js"></script>
     <script src='imagenet_class.js'></script>
     <script src='final2.js'></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#loopslider').each(function(){
+        var loopsliderWidth = $(this).width();
+        var loopsliderHeight = $(this).height();
+        $(this).children('ul').wrapAll('<div id="loopslider_wrap"></div>');
+
+        var listWidth = $('#loopslider_wrap').children('ul').children('li').width();
+        var listCount = $('#loopslider_wrap').children('ul').children('li').length;
+
+        var loopWidth = (listWidth)*(listCount);
+
+        $('#loopslider_wrap').css({
+            top: '0',
+            left: '0',
+            width: ((loopWidth) * 2),
+            height: (loopsliderHeight),
+            overflow: 'hidden',
+            position: 'absolute'
+        });
+
+        $('#loopslider_wrap ul').css({
+            width: (loopWidth)
+        });
+        loopsliderPosition();
+
+        function loopsliderPosition(){
+            $('#loopslider_wrap').css({left:'0'});
+            $('#loopslider_wrap').stop().animate({left:'-' + (loopWidth) + 'px'},25000,'linear');
+            setTimeout(function(){
+                loopsliderPosition();
+            },25000);
+        };
+
+        $('#loopslider_wrap ul').clone().appendTo('#loopslider_wrap');
+    });
+});
+</script>
    <title>FINAL PROJECT</title>
    　<link href="final.css" rel="stylesheet">
  </head>
@@ -13,14 +52,24 @@
  <body>
    <center>
        <img src="Title.png" width="500" height="80"/><br><br>
-       <img src="line.png" width="500" height="5"/>
+       <div id="loopslider">
+<ul>
+<li><a href="#"><img src="catdog.jpg" width="300" height="200" alt="" /></a></li>
+<li><a href="#"><img src="dogdog9.jpg" width="300" height="200" alt="" /></a></li>
+<li><a href="#"><img src="dogdog10.jpg" width="300" height="200" alt="" /></a></li><li><a href="#"><img src="img/photo02.jpg" width="100" height="100" alt="" /></a></li>
+<li><a href="#"><img src="dogdog5.jpg" width="300" height="200" alt="" /></a></li>
+<li><a href="#"><img src="dogdog6.jpg" width="300" height="200" alt="" /></a></li>
+<li><a href="#"><img src="catpoor.jpg" width="300" height="200" alt="" /></a></li>
+</ul>
+</div>
+       <img src="line.png" width="500" height="5"/><br>
      <p class="wfont6"> 下の地図から地域を選択して、<br>
        あなたが今住んでいる地域の保護されている犬猫を探してみましょう。</p>
       <img src="line.png" width="500" height="5"/><br><br>
      <p class="wfont2"> ~ Map ~  </p><br>
 <img src="map1.png" usemap="#Map" width="700" height=600"/><br><br><br><br>
 <map name="Map">
-<area shape="rect" coords="573,41,795,200" href="finalp.html">
+<area shape="rect" coords="573,41,795,200" href="hokkaido.html">
 <area shape="rect" coords="573,266,696,479" href="tohoku.html">
 <area shape="rect" coords="582,494,684,585" href="kanto.html">
 <area shape="rect" coords="466,418,551,592" href="chubu.html">
@@ -28,16 +77,16 @@
 <area shape="rect" coords="321,414,414,591" href="chugoku.html">
 <area shape="rect" coords="318,643,444,721" href="shikoku.html">
 <area shape="rect" coords="114,564,243,758" href="kyushu.html">
-<area shape="rect" coords="260,153,233,218" href="okinawa.html">
+<area shape="rect" coords="260,153,233,218" href="kyushu.html">
 </map>
 
-<img src="line.png" width="500" height="20"/><br>
+<img src="line.png" width="500" height="20"/><br><br>
 <p class="wfont5"> 犬猫の種類がわからない？ </p>
 
 <p><input type="file" id='input_file'></p>
-<p><button onclick='onFileSelected()'>Load</button></p>
+<a button onclick='onFileSelected()' href="#" class="square_btn">LOAD</a>
 <p><canvas id="test_canvas" width="256" height="256"></canvas></p>
-<p><button onclick="predict();">Predict</button></p>
+<a button onclick="predict();" href="#" class="square_btn">PREDICT</a>
 <p id='result'>Result</p>
 
 <p class="wfont1"> ファイルを選択からここに画像を入れてみてください！ </p>
@@ -45,8 +94,17 @@
                    ② 写真がアップロードされたらPredictを押してください。<br>
                    ③ 下に英語で結果が出されます。<br><br>
 
-<br><br>
+<br>
+<img src="line.png" width="500" height="20"/><br>
 
+<p class="wfont7">
+    ※殺処分は、ペットを飼うことと切っても切り離せない負の側面です。<br>
+    殺処分数を減らすためには、まず無計画にペットを増やさないこと。<br>
+    かわいいからといって命ある生き物を衝動買いしないこと。<br>
+    ペットを家に迎え入れた際には避妊手術や去勢手術を行って、<br>
+    飼いきれない数のペットを生み出さないことも、<br>
+    愛犬家・愛猫家の重要な義務であることを肝に銘じておきましょう。<br><br><br></p>
+ </body></center>
      </center></body>
 
 
